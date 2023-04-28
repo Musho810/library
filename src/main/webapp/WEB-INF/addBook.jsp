@@ -1,4 +1,3 @@
-
 <%@ page import="java.util.List" %>
 <%@ page import="library.model.Author" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -8,9 +7,7 @@
 </head>
 <body>
 <% List<Author> authorList = (List<Author>) request.getAttribute("authors");
-
 %>
-
 <h1> Please input book`s data:</h1>
 <a href="/homePage">Home</a>
 <form action="/books/add" method="post" enctype="multipart/form-data">
@@ -21,7 +18,8 @@
     <select name="authorId">
         <% for (Author author : authorList) {
         %>
-        <option value="<%=author.getId()%>"><%=author.getName()%> <%=author.getSurname()%></option>
+        <option value="<%=author.getId()%>"><%=author.getName()%> <%=author.getSurname()%>
+        </option>
         <%
             }
         %>
@@ -29,9 +27,6 @@
     Book cover picture <br>
     <input type="file" name="bookPic"><br>
     <input type="submit" value="ADD">
-
 </form>
-
-
 </body>
 </html>

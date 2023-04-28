@@ -11,8 +11,9 @@
 <%
     String msg = (String) request.getAttribute("msg");
 %>
-<%if (msg !=null) {%>
-<p style=" color: red "><%=msg%></p>
+<%if (msg != null) {%>
+<p style=" color: red "><%=msg%>
+</p>
 <% } %>
 <h1> Please input yor email and password</h1><br>
 <form action="/login" method="post">

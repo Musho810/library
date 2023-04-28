@@ -1,14 +1,11 @@
 package library.servlet;
-
 import library.manager.BookManager;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
 @WebServlet(urlPatterns = "/books/remove")
 public class RemoveBookServlet extends HttpServlet {
     BookManager bookManager = new BookManager();
@@ -18,5 +15,4 @@ public class RemoveBookServlet extends HttpServlet {
         bookManager.removeBookById(bookId);
         resp.sendRedirect("/books");
     }
-
 }

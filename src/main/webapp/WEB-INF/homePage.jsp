@@ -5,17 +5,13 @@
 </head>
 <body>
 <header>
-  <h1>Welcome to my Library page</h1>
+    <h1>Welcome to my Library page</h1>
 </header>
-
-  <a href="/homePage">Home</a>
-  <a href="/authors">Show all Authors</a>
-  <a href="/books">Show all books</a>
-  <a href="/authors/add">Add Author</a>
-  <a href="/books/add">Add book</a>
-  <a href="/logout">LOGOUT</a>
-
-
-
+<a href="/homePage">Home</a>
+<a href="/authors">Show all Authors</a>
+<a href="/books">Show all books</a>
+<a href="/authors/add">Add Author</a>
+<a href="/books/add">Add book</a>
+<a href="/logout">LOGOUT</a>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <%@ page import="java.util.List" %>
 <%@ page import="library.model.Book" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -7,7 +6,6 @@
     <title>Books</title>
 </head>
 <body>
-
 <%
     List<Book> bookList = (List<Book>) request.getAttribute("books");
 %>
@@ -15,7 +13,6 @@
 <form action="/books" method="post">
     <input type="text" name="searchedName" placeholder="Searched book name"/><br>
     <input type="submit" value="SEARCH">
-
 </form>
 <table border="1">
     <tr>
@@ -33,7 +30,7 @@
         <td><%=book.getId()%>
         </td>
         <td>
-            <% if (book.getBookPic()==null || book.getBookPic().length()==0) { %>
+            <% if (book.getBookPic() == null || book.getBookPic().length() == 0) { %>
             <img src="/images/11.jpg" width="50">
             <% } else { %>
             <img src="/getBookImage?bookPic=<%=book.getBookPic()%>" width="50">
@@ -56,15 +53,10 @@
             <a href="/books/remove?bookId=<%=book.getId()%>"> Remove </a> |
             <a href="/books/edit?bookId=<%=book.getId()%>"> Edit </a>
         </td>
-
-
     </tr>
     <%
         }
     %>
-
 </table>
-
-
 </body>
 </html>

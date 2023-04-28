@@ -1,4 +1,3 @@
-
 <%@ page import="java.util.List" %>
 <%@ page import="library.model.Book" %>
 <%@ page import="library.model.Author" %>
@@ -8,13 +7,10 @@
     <title>Edit Book</title>
 </head>
 <body>
-
 <%
     Book book = (Book) request.getAttribute("book");
-    List <Author> authorList = (List<Author>) request.getAttribute("authors");
-
+    List<Author> authorList = (List<Author>) request.getAttribute("authors");
 %>
-
 <h1> Please edit book`s data:</h1>
 <a href="/homePage">Home</a>
 <form action="/books/edit" method="post" enctype="multipart/form-data">
@@ -33,20 +29,15 @@
         } else { %>
         <option value="<%=author.getId()%>"><%=author.getName()%> <%=author.getSurname()%> >
         </option>
-
         <%
             }
         %>
         <%
             }
         %>
-
     </select> <br>
     <input type="file" name="bookPic" value="<%=book.getBookPic()%>"/><br>
     <input type="submit" value="Update">
-
 </form>
-
-
 </body>
 </html>

@@ -1,5 +1,4 @@
 package library.servlet;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,20 +8,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-
 @WebServlet(urlPatterns = "/getAuthorImage")
 public class GetAuthorImageServlet extends HttpServlet {
-
-
     private static final String IMAGE_PATH = "C:\\Users\\Mush\\IdeaProjects\\myLibrary2023\\projectimages\\";
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String authorPic = req.getParameter("authorPic");
-
         String filePath = IMAGE_PATH + authorPic;
-
-
         File imageFile = new File(filePath);
         if (imageFile.exists()) {
             try (FileInputStream inputStream = new FileInputStream(imageFile)) {

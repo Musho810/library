@@ -13,11 +13,7 @@
     <input type="number" name="age" placeholder="Please input author age"><br>
     Author picture <br>
     <input type="file" name="authorPic"><br>
-
     <input type="submit" value="ADD">
-
 </form>
-
-
 </body>
 </html>
