@@ -8,9 +8,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+
+import static library.constants.SharedConstants.IMAGE_PATH;
+
 @WebServlet(urlPatterns = "/getUserImage")
 public class GetUserImageServlet extends HttpServlet {
-    private static final String IMAGE_PATH = "C:\\Users\\Mush\\IdeaProjects\\mylibrary23\\projectimages\\";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String userPic = req.getParameter("userPic");

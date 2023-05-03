@@ -67,4 +67,18 @@ public class UserManager {
         }
         return null;
     }
+
+    public User getById(int userId) {
+        String sql = "SELECT * From user where id = " + userId;
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            if (resultSet.next()) {
+                return getUserFromResultSet(resultSet);
+            }
+        } catch (SQLException | ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

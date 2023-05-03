@@ -37,6 +37,7 @@
         %>
     </select> <br>
     <input type="file" name="bookPic" value="<%=book.getBookPic()%>"/><br>
+    <input type="hidden" name="userId" value="<%=session.getAttribute("active")%>"/>
     <input type="submit" value="Update">
 </form>
 </body>

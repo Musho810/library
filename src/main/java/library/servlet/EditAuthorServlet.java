@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.IOException;
+
+import static library.constants.SharedConstants.IMAGE_PATH;
+
 @WebServlet(urlPatterns = "/authors/edit")
 @MultipartConfig(
         fileSizeThreshold = 1024 * 1024 * 1, //1 Mb
@@ -18,7 +21,6 @@ import java.io.IOException;
 )
 public class EditAuthorServlet extends HttpServlet {
     private AuthorManager authorManager = new AuthorManager();
-    private static final String IMAGE_PATH = "C:\\Users\\Mush\\IdeaProjects\\myLibrary2023\\projectimages\\";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int authorId = Integer.parseInt(req.getParameter("authorId"));

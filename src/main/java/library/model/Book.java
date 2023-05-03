@@ -14,4 +14,6 @@ public class Book {
     private double price;
     private Author author;
     private String bookPic;
+    private User user;
+
 }
